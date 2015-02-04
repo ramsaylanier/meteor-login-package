@@ -1,10 +1,10 @@
 Package.describe({
   name: 'ramsay:login',
-  version: '1.0.6',
+  version: '1.0.0',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Custom login package with /login route and twitter login',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/ramsaylanier/meteor-login-package',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'

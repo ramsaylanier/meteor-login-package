@@ -4,6 +4,8 @@ This is a custom login package for Meteor.js using the core accounts-password an
 
 This package differs from the accounts-ui package, as it has a built in route that goes to a /login.html page, and a better UI. Personally, I'm not a fan of using bootstrap, and the accounts-ui package that offeres a dropdown style account login/register functionality didn't suit my needs.
 
+[Check out a demo here.](http://meteor-login-example.meteor.com/dashboard)
+
 ### Usage:
 The usage is the same as the accounts-ui package. Simply include a {{> loginButtons}} template block somewhere. Since this package uses Iron:Router, you will probably have some sort of layout template. So include it there, or inside of a {{> header}} partial.
 
@@ -15,8 +17,8 @@ This package currently comes with just a couple of custom configuration settings
 ```
 Meteor.startup(function(){
 	CustomLogin.config({
-		loginRoute: '/login',
-		endbleTwitterLogin: false
+		afterLoginRoute: '/dashboard', 		//defaults to '/dashboard'
+		endbleTwitterLogin: fals		//defaults to true
 	})
 })
 ```

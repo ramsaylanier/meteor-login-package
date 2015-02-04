@@ -1,0 +1,10 @@
+<template name="loginButtons">
+	<nav class="login-buttons">
+		{{#if currentUser}}
+			<a href="#" class="header-link account-link">{{currentUser.username}} <span class="arrow">&#9662;</span></a>
+			{{>account}}
+		{{else}}
+			<a href="{{pathFor route='login'}}" class="btn header-link login-link">Login</a>
+		{{/if}}
+	</nav>
+</template>

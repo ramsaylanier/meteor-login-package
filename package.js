@@ -36,19 +36,28 @@ Package.onUse(function(api) {
   api.imply(['accounts-twitter','service-configuration'], 'server');
 
   api.addFiles([
-    'ramsay:login.html', 
-    'ramsay:_account.html',
-    'ramsay:_changePasswordModal.html',
-    'ramsay:_resetPasswordModal.html',
-    'ramsay:_formField.html',
-    'ramsay:_loginButtons.html',
-    'ramsay:_twitterIcon.html',
-    'ramsay:login-client.js',
-    'ramsay:login.css'
+    'client/views/loginForm/loginForm.html', 
+    'client/views/loginForm/loginForm.js', 
+    'client/views/account/_account.html',
+    'client/views/account/_account.js',
+    'client/views/changePassword/_changePasswordModal.html',
+    'client/views/changePassword/_changePasswordModal.js',
+    'client/views/resetPassword/_resetPasswordModal.html',
+    'client/views/resetPassword/_resetPasswordModal.js',
+    'client/views/_formField.html',
+    'client/views/_formField.js',
+    'client/views/loginButtons/_loginButtons.html',
+    'client/views/loginButtons/_loginButtons.js',
+    'client/views/_twitterIcon.html',
+    'client/router.js',
+    'client/loginConfig.js',
+    'client/css/login-main.css'
   ], 'client');
+
+  api.export('CustomLogin', ['client', 'server']);
   
   api.addFiles([
-    'ramsay:login-server.js'
+    'server/configureService.js'
   ], 'server');
 });
 

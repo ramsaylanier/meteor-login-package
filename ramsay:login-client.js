@@ -82,6 +82,7 @@ if (Meteor.isClient){
 					}
 					else {
 						Session.set('loginPage', null);
+						Router.go('/');
 					}
 				})
 			)

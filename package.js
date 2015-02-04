@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ramsay:login',
-  version: '1.0.0',
+  version: '1.0.3',
   // Brief, one-line summary of the package.
   summary: 'Custom login package with /login route and twitter login',
   // URL to the Git repository containing the source code for this package.
@@ -20,10 +20,11 @@ Package.onUse(function(api) {
     'accounts-twitter', 
     'underscore', 
     'templating',
-    'ramsay:errors',
-    'iron:router'
+    'service-configuration',
+    'ramsay:errors@1.0.0',
+    'iron:router@1.0.7'
   ], 'client');
-  api.imply(['accounts-base', 'accounts-password']);
+  api.imply(['accounts-base', 'accounts-password','service-configuration']);
   api.addFiles([
     'ramsay:login.html', 
     'ramsay:_account.html',

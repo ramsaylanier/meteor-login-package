@@ -1,6 +1,6 @@
 Package.describe({
   name: 'ramsay:login',
-  version: '1.0.7',
+  version: '1.0.8',
   // Brief, one-line summary of the package.
   summary: 'Custom login package with login route and twitter login',
   // URL to the Git repository containing the source code for this package.
